@@ -93,7 +93,7 @@ class Book {
         this.numberOfCopies++
     }
 
-    
+
 }
 const myBook = new Book()
 const myLibrary = new Library()
@@ -106,7 +106,7 @@ myLibrary.addBook(book1)
 myLibrary.addBook(book2)
 myLibrary.addBook(book3)
 console.log(myLibrary.getAllBooks())
-// myLibrary.removeBook("1984")
+myLibrary.removeBook("1984")
 console.log(myLibrary.findBook("The Hobbit"))
 myLibrary.lendBook("1984","Gaurav")
 myLibrary.lendBook("1984","Harshit")
