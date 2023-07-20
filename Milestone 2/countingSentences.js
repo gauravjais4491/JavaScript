@@ -1,6 +1,6 @@
 // const prompt=require("prompt-sync")()
 // let sentance=prompt("Enter a sentance: ")
-  function countSentance(sentance){let sentenceCount=0
+function countSentance(sentance){let sentenceCount=0
     let arr=sentance.split("")
     for(i=0;i<arr.length;i++)
     {
