@@ -92,6 +92,8 @@ class Book {
         this.isBorrowed = false;
         this.numberOfCopies++
     }
+
+    
 }
 const myBook = new Book()
 const myLibrary = new Library()
