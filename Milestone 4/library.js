@@ -119,13 +119,16 @@ const myLibrary = new Library()
 let book1 = new Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 10, 5);
 let book2 = new Book("The Hobbit", "J.R.R. Tolkien", 5, 5);
 let book3 = new Book("1984", "George Orwell", 8, 5);
+let book4 = new Book("The Hobbit 2", "J.R.R. Tolkien", 6);
 
 myLibrary.addBook(book1)
 myLibrary.addBook(book2)
 myLibrary.addBook(book3)
+myLibrary.addBook(book4)
 console.log(myLibrary.getAllBooks())
 // myLibrary.removeBook("1984")
+myLibrary.removeBook("The Great Gatsby")
 console.log(myLibrary.findBook("The Hobbit"))
 myLibrary.lendBook("1984", "Gaurav")
 myLibrary.lendBook("1984", "Harshit")
-myLibrary.returnBook("1984", "Gaurav");
+myLibrary.returnBook("The Hobbit", "Gaurav");
