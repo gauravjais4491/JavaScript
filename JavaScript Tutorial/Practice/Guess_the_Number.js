@@ -40,12 +40,12 @@ const Guess_The_Number_Function = (Guess_The_Number, Number_To_Guess, Number_Of_
 }
 
 let try_Again = (Number_To_Guess, Number_Of_Guess) => {
-    console.log(`Do you want to play Again? \n Yes or No: `)
+    console.log(`Do you want to play Again? \n yes or no: `)
     let isTryAgain = prompt()
-    if (isTryAgain.toLowerCase() === "yes") {
+    if (isTryAgain === "yes") {
         Start(Number_To_Guess, Number_Of_Guess);
     }
-    else if (isTryAgain.toLowerCase() === "no") {
+    else if (isTryAgain === "no") {
         console.log(`Thank You for Playing, Have a nice day!`)
     }
     else {
@@ -53,14 +53,16 @@ let try_Again = (Number_To_Guess, Number_Of_Guess) => {
         try_Again(Number_To_Guess, Number_Of_Guess)
     }
 }
+let number_Of_Times_You_Played=1
 
 let play_Again = () => {
-    console.log(`You have played this game only once.\n Do you Want To Try again?  \n Yes or No: `)
+    console.log(`You have played this game only ${number_Of_Times_You_Played} Times.\n Do you Want To Try again?  \n yes or no: `)
+    number_Of_Times_You_Played++
     let isPlayAgain = prompt()
-    if (isPlayAgain.toLowerCase() === "yes") {
+    if (isPlayAgain === "yes") {
         generate_number();
     }
-    else if (isPlayAgain.toLowerCase() === "no") {
+    else if (isPlayAgain === "no") {
         console.log("Thanks For playing")
     }
     else {
