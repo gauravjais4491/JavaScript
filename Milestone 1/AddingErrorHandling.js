@@ -23,9 +23,9 @@ function checkAgain() {
         function getNumbers() {
             let input = prompt("Enter two number seperated by commas: ")
             let arrayOfTwoNumber = input.split(",");
-            return errorHandingForInput(arrayOfTwoNumber);
+            return seterrorHandingForInput(arrayOfTwoNumber);
         }
-        function errorHandingForInput(arrayOfTwoNumber) {
+        function seterrorHandingForInput(arrayOfTwoNumber) {
             if ((!isNaN(arrayOfTwoNumber[0]) == true) && (!isNaN(arrayOfTwoNumber[1]) == true)) {
                 return arrayOfTwoNumber;
             }
