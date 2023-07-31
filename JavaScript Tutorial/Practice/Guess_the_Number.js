@@ -49,7 +49,7 @@ let try_Again = (Number_To_Guess, Number_Of_Guess) => {
         console.log(`Thank You for Playing, Have a nice day!`)
     }
     else {
-        console.log('Invalid Input')
+        console.error("Invalid Input")
         try_Again(Number_To_Guess, Number_Of_Guess)
     }
 }
@@ -60,13 +60,14 @@ let play_Again = () => {
     number_Of_Times_You_Played++
     let isPlayAgain = prompt()
     if (isPlayAgain === "yes") {
+        console.clear()
         generate_number();
     }
     else if (isPlayAgain === "no") {
         console.log("Thanks For playing")
     }
     else {
-        console.log('Invalid Input')
+        console.error('Invalid Input')
         try_Again()
     }
 }
