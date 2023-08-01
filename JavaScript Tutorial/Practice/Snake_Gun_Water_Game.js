@@ -10,6 +10,9 @@ let isPlay = true;
 
 while (isPlay) {
 
+    const underline=()=>{
+        console.log("----------------------------------")
+    }
     const inputValidation = (User) => {
         if (arr.includes(User)) {
             isPlay=false;
