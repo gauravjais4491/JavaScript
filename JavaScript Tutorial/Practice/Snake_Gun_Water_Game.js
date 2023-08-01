@@ -9,6 +9,17 @@ let computer = Math.floor(Math.random() * arr)
 let isPlay = true;
 
 while (isPlay) {
+
+    const inputValidation = (User) => {
+        if (arr.includes(User)) {
+            isPlay=false;
+        }
+        else {
+            console.log("Invalid Input!")
+            try_Again()
+        }
+    }
+
     const Start=()=>{
         underline()
         console.log("Welcome to the Gaming World! ")
