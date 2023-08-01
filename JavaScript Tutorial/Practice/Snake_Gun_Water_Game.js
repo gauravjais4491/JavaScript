@@ -13,6 +13,23 @@ while (isPlay) {
     const underline=()=>{
         console.log("----------------------------------")
     }
+
+    let try_Again = () => {
+        console.log(`Do you want to play Again? \n yes or no: `)
+        let isTryAgain = prompt()
+        if (isTryAgain === "yes") {
+            Start();
+        }
+        else if (isTryAgain === "no") {
+            console.log(`Thank You for Playing, Have a nice day!`)
+            isPlay=false;
+        }
+        else {
+            console.error("Invalid Input")
+            try_Again()
+        }
+    }
+    
     const inputValidation = (User) => {
         if (arr.includes(User)) {
             isPlay=false;
