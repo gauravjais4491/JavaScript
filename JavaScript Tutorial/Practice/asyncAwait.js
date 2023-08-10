@@ -14,7 +14,7 @@ async function weatherReport() {
             resolve()
         }, 1000)
     })
-    let waitW=await wait
+    await wait
     underline()
     console.log("Fetching Delhi Weather Please wait .....")
     underline()
@@ -42,11 +42,12 @@ const main1 = async () => {
     await weatherReport()
     await cherry()
 }
-const gaurav = () => {
+const gaurav = async() => {
     underline()
     console.log("heyy i am gaurav and i am not waiting")
 
     
 }
+// await main1()  --> gaurav() will not execute
 main1()
 gaurav()
