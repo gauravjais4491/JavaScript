@@ -48,7 +48,7 @@ while (isPlay) {
         let userPassword = prompt(`Please enter the password of the registered User: `)
         underline();
         if (!(((details["Name"]) === userLogin) && ((details["Password"]) === userPassword))) {
-            console.log('Invalid:  UserName and Password!');
+            console.log('Invalid:  UserName or Password!');
             login(details);
         }
         else {

@@ -38,7 +38,7 @@ const Guess_The_Number_Function = (Guess_The_Number, Number_To_Guess, Number_Of_
             console.log("Hurrah! You Guess the Number")
             underline()
             Number_Of_Guess++
-            console.log(`The Number is Guesses is ${Number_Of_Guess}`)
+            console.log(`The Number of Guesses is ${Number_Of_Guess}`)
             play_Again()
             break;
         }
