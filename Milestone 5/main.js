@@ -2,9 +2,7 @@ import Note from "./src/note.js";
 import fs from "fs"
 import promisify from "util"
 import promptSync from 'prompt-sync';
-import { validateHeaderValue } from "http";
 import InputValidationError from "./src/note.js"
-import { error } from "console";
 
 const prompt = promptSync();
 let noteslist = []
