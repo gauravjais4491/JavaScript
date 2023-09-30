@@ -12,6 +12,7 @@
   "dependencies": {
     "fs": "^0.0.1-security",
     "prompt-sync": "^4.2.0",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "webdriverio": "^8.14.3"
   }
 }
