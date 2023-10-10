@@ -1,7 +1,8 @@
 // Write a function argumentsLength that returns the count of arguments passed to it.
 
-const count = (arr) => {
+
+const countArgument = (arr) => {
     return arr.length;
 }
 
-console.log(count([1,2,3,4,5,null,true]));
+console.log(countArgument([1,2,3,4,5,null,true]));
