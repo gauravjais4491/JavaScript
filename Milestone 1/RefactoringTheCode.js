@@ -1,11 +1,11 @@
-const prompt = require("prompt-sync")()
-
+// const prompt = require('promp-sync')();
+import prompt from "prompt-sync"
 let continueCalculating=true;
 do {
     function getOperation() {
         console.log("\n Which operation you want to perform: ")
         console.log("+ for Addition")
-        console.log("- for Substraction")
+        console.log("- for Subtraction")
         console.log("* for Multiplication")
         console.log("/ for Division")
         let userInput = prompt("")
@@ -19,7 +19,8 @@ do {
         }
     }
     function getNumbers() {
-        let input = prompt("Enter two number seperated by commas: ")
+        console.log("Enter two number seperated by commas: ");
+        let input = prompt()
         let arrayOfTwoNumber = input.split(",");
         return arrayOfTwoNumber;
     }
@@ -32,7 +33,7 @@ do {
                 add(array)
                 break;
             case "-":
-                substract(array);
+                subtract(array);
                 break;
             case "*":
                 multiply(array);
@@ -46,23 +47,23 @@ do {
         console.log(`The Addition of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) + parseInt(array[1]))}`);
         tryAgain();
     }
-    function substract(array){
-        console.log(`The Addition of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) - parseInt(array[1]))}`);
+    function subtract(array){
+        console.log(`The Subtraction of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) - parseInt(array[1]))}`);
         tryAgain();
     }
     function multiply(array){
-        console.log(`The Addition of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) *  parseInt(array[1]))}`);
+        console.log(`The Multiplication   of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) *  parseInt(array[1]))}`);
         tryAgain();
     }
     function divide(array){
-        console.log(`The Addition of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) / parseInt(array[1]))}`);
+        console.log(`The Division of ${array[0]} and  ${array[1]} is: ${(parseInt(array[0]) / parseInt(array[1]))}`);
         tryAgain();
     }
     
     function tryAgain() {
         console.log("You want to try again")
-        let tryAgain = prompt()
-        if (tryAgain == "yes") {
+        let userInput = prompt()
+        if (userInput == "yes") {
             calculate();
         }
         else {
@@ -72,4 +73,3 @@ do {
     }
     calculate();
 } while (continueCalculating);
-ß
