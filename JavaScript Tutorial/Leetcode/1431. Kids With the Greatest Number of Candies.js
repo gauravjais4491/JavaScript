@@ -6,18 +6,17 @@
 
 
 let kidsWithCandies = (candies, extraCandies) => {
-    let result = []
     let threshold = Math.max(...candies)
     for (let i = 0; i < candies.length; i++) {
         candies[i] += extraCandies
         if (candies[i] >= threshold) {
-            result.push(true)
+            candies[i] = true;
         }
         else {
-            result.push(false)
+            candies[i] = false
         }
     }
-    return result;
+    return candies;
 };
 
 console.log(kidsWithCandies([4, 2, 1, 1, 2], 1))

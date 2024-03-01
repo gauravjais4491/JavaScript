@@ -1,6 +1,7 @@
 async function weatherReport() {
     let delhiWeather = new Promise((resolve, reject) => {
         setTimeout(() => {
+            resolve()
             resolve("27 Degree")
         }, 5000)
     })
@@ -19,14 +20,14 @@ async function weatherReport() {
     console.log("Fetching Delhi Weather Please wait .....")
     underline()
     let delhiW = await delhiWeather
-    console.log("Fetched Delhi Weather......")
+    console.log("Fetched Delhi Weather")
     underline()
     console.log(`Delhi Weather Report: ${delhiW}`)
     underline()
     console.log("Fetching Banglore Weather Please wait .....")
     let bangloreW = await bangloreWeather
     underline()
-    console.log("Fetched Banglore Weather......")
+    console.log("Fetched Banglore Weather")
     underline()
     console.log(`Banglore Weather Report: ${bangloreW}`)
 }
@@ -42,12 +43,44 @@ const main1 = async () => {
     await weatherReport()
     await cherry()
 }
-const gaurav = async() => {
+const gaurav = () => {
     underline()
     console.log("heyy i am gaurav and i am not waiting")
-
-    
 }
-// await main1()  --> gaurav() will not execute
-main1()
-gaurav()
+
+const weather = async () => {
+    await main1()
+    gaurav();
+};
+const login1 = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Login successfully");
+            resolve()
+        }, 1000);
+    });
+};
+
+const addToCart1 = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Product Added To Cart...");
+            resolve()
+        }, 1000);
+    });
+};
+
+const payment1 = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Payment successful");
+            resolve()
+        }, 1000);
+    });
+};
+
+const placeOrder1 = async () => {
+    await weather().then(()=>login1()).then(() => addToCart1()).then(() => payment1());
+};
+
+await placeOrder1();
