@@ -48,7 +48,7 @@ class PlaylistManager {
         for (let i = 1; i <= num; i++) {
             this.users[`User${i}`] = [];
         }
-        this.objectStatus();
+        this.playlistStatus();
     }
 
     managePlaylist() {
@@ -78,7 +78,7 @@ class PlaylistManager {
                 case "no":
                     console.log(`Thank you for visiting. Have a nice day!`);
                     this.addSong = false;
-                    this.objectStatus();
+                    this.playlistStatus();
                     break;
                 default:
                     console.error("Invalid input");
@@ -91,7 +91,7 @@ class PlaylistManager {
         for (const key in this.users) {
             console.log(key);
         }
-
+        this.underline()
         let selectedUser;
         do {
             selectedUser = prompt(`In which user do you want to play a song:`);
@@ -104,13 +104,13 @@ class PlaylistManager {
         this.addSongToUser(selectedUser, songToAdd);
     }
 
-    objectStatus() {
+    playlistStatus() {
         this.underline()
         if (this.count === 1) {
-            console.log("Initial Playlist:\n");
+            console.log("Initial Playlist Status:\n");
             this.count++;
         } else {
-            console.log("Updated Playlist:\n");
+            console.log("Updated Playlist Status:\n");
         }
         console.log(this.users);
         this.underline();
