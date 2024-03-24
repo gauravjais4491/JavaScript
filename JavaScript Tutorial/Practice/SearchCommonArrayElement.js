@@ -30,7 +30,7 @@ console.log(smallerNumbersThanCurrent1([3, 8, 1, 2, 4]))
 
 
 const SearchCommonArrayElement1 = (arr1, arr2) => {
-    return arr1.some(item => arr2.includes(item))
+    return arr1.map(item => arr2.includes(item))
 }
 
 

@@ -51,3 +51,20 @@ function stringToInt(str) {
     return result
 }
 console.log(stringToInt('123'))
+
+const obj = {
+    a: '1',
+    b: '2',
+    c: '1',
+    d: '2',
+    e: '1',
+    f: '2',
+    arr: [1, 2, 1, 2, 1, 2]
+}
+for (const key of obj.arr) {
+    console.log(key);
+}
+const str = 'Gaurav Kumar Jaiswal'
+for (const value of str) {
+    console.log(value);
+}
