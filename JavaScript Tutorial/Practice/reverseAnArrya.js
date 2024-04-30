@@ -22,7 +22,15 @@ const reverse3 = str => {
     }
     return [...str].reverse().join('')
 }
+function reverse4(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
 
 console.log(reverse('Hi My name is Gaurav'));
 console.log(reverse2('Hi My name is Gaurav'));
 console.log(reverse3('Hi My name is Gaurav'));
+console.log(reverse4('Hi My name is Gaurav'));

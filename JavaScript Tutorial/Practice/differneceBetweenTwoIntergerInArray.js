@@ -1,5 +1,5 @@
 function findMinimumDifference(arr){
-    console.log(arr.sort((a,b)=>a-b))
+    arr.sort((a,b)=>a-b)
     if (arr.length < 2) {
         return -1; 
     }
@@ -16,6 +16,6 @@ function findMinimumDifference(arr){
     return minDiff;
 } 
 
-const numbers = [4,8,1,41,56];
+const numbers = [1, 2, 14, 4, 5,10];
 const minDifference = findMinimumDifference(numbers);
 console.log("Minimum difference:", minDifference);

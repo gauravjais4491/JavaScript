@@ -1,11 +1,6 @@
-// Function to find minimal number of coins
-function findMin(n) {
-    // Array to store the coins
+const findMin = (n) => {
     let v = [];
-
-    // Iterate till n > 0
     while (n > 0) {
-        // Check condition
         if (n >= 2000) {
             v.push(2000);
             n -= 2000;
@@ -38,17 +33,26 @@ function findMin(n) {
             n -= 1;
         }
     }
-
-    // Return the array
     return v;
 }
 
-// Driver code
-let v = 93;
-console.log("Following is minimal number of change for " + v + " :");
 
-// Function call
-let vec = findMin(v);
+const minCoins = (coins, amount) => {
+    coins.sort((a, b) => b - a);
+    const usedCoins = [];
+    for (let coin of coins) {
+        const numCoins = Math.floor(amount / coin);
+        usedCoins.push(...Array(numCoins).fill(coin));
+        amount -= numCoins * coin;
+        if (amount === 0) break;
+    }
 
-// Print the array
-console.log(vec.length);
+    return usedCoins
+}
+
+const coins = [1, 2, 5];
+const amount = 11;
+console.log(minCoins(coins, amount)); 
+console.log(findMin(amount));
+
+
