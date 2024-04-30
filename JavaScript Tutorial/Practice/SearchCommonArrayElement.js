@@ -34,4 +34,4 @@ const SearchCommonArrayElement1 = (arr1, arr2) => {
 }
 
 
-console.log(SearchCommonArrayElement1(['e', 'b', 'c'], ['e', 'd', 'e']))
+// console.log(SearchCommonArrayElement1(['e', 'b', 'c'], ['e', 'd', 'e']))
