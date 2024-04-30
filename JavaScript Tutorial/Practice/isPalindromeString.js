@@ -1,6 +1,5 @@
 function isPalindromeString(str) {
-    // const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
-    
+    const cleanStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
     let start = 0;
     let end = cleanStr.length - 1;
 
@@ -14,7 +13,6 @@ function isPalindromeString(str) {
 
     return true;
 }
-
 
 console.log(isPalindromeString("A man, a plan, a canal, Panama"));
 console.log(isPalindromeString("racecar"));
