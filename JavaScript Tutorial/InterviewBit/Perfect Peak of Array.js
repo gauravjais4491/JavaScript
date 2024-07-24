@@ -61,10 +61,6 @@ No such element exits.
 
 */
 
-const perfectPeak = (A) => {
-
-}
-
 const peak = (left, right, target)  => {
   let result = false;
   for (let i = 0; i < left.length; i++) {
