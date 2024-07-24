@@ -1,0 +1,241 @@
+{
+    "staff": [
+        {
+            "name": "Priyanshu",
+            "id": 1001,
+            "workAreas": [
+                {
+                    "shiftTime": "9:00 AM - 10:00 AM",
+                    "area": "Cardiology Department"
+                },
+                {
+                    "shiftTime": "10:00 AM - 11:00 AM",
+                    "area": "Emergency Department"
+                }
+            ]
+        },
+        {
+            "name": "Baganna",
+            "id": 1002,
+            "workAreas": [
+                {
+                    "shiftTime": "12:00 PM - 2:30 PM",
+                    "area": "Dermatology Department"
+                },
+                {
+                    "shiftTime": "5:00 PM - 7:00 PM",
+                    "area": "Emergency Department"
+                }
+            ]
+        },
+        {
+            "name": "Al-fa",
+            "id": 1003,
+            "workAreas": [
+                {
+                    "shiftTime": "4:00 PM - 11:00 PM",
+                    "area": "Cardiology Department"
+                },
+                {
+                    "shiftTime": "10:00 AM - 11:00 AM",
+                    "area": "Nursing Department"
+                }
+            ]
+        }
+    ],
+    "patients": [
+        {
+            "name": "Amrutha",
+            "id": 2001,
+            "doctorAssignedId": 3001,
+            "diseases": "High Blood Pressure.",
+            "bloodReports": [
+                {
+                    "name": "RBC",
+                    "result": "Normal"
+                },
+                {
+                    "name": "WBC",
+                    "result": "Normal"
+                },
+                {
+                    "name": "Cholesterol",
+                    "result": "High"
+                }
+            ],
+            "treatment": {
+                "date": "2024-06-11",
+                "description": "Monitored for high blood pressure"
+            }
+        },
+        {
+            "name": "Hemanth",
+            "id": 2002,
+            "doctorAssignedId": 3002,
+            "diseases": "Skin Cancer",
+            "bloodReports": [
+                {
+                    "name": "Platelets",
+                    "result": 90.8
+                },
+                {
+                    "name": "HbA1c",
+                    "result": 8.5
+                }
+            ],
+            "treatment": {
+                "date": "2024-06-13",
+                "description": "Monitored for skin cancer"
+            }
+        },
+        {
+            "name": "Sownya",
+            "id": 2003,
+            "doctorAssignedId": 3001,
+            "diseases": "Heart Attack.",
+            "bloodReports": [
+                {
+                    "name": "BP",
+                    "result": "120 / 80"
+                },
+                {
+                    "name": "Glucose Level",
+                    "result": 100
+                }
+            ],
+            "treatment": {
+                "date": "2024-06-15",
+                "description": "Monitored for heart attack"
+            }
+        }
+    ],
+    "doctors": [
+        {
+            "name": "Gaurav",
+            "id": 3001,
+            "cabinNumber": 101,
+            "specializations": [
+                "Cardiologist",
+                "Neurologist"
+            ]
+        },
+        {
+            "name": "Sangam",
+            "id": 3002,
+            "cabinNumber": 102,
+            "specializations": [
+                "Dermatologist",
+                "Pediatrician"
+            ]
+        }
+    ],
+    "ambulances": [
+        {
+            "driverName": "Vineet",
+            "drivingLicense": true,
+            "id": 4001,
+            "ambulanceNumber": 201,
+            "patientDetails": [
+                {
+                    "patientName": "Deepamala",
+                    "patientLocation": "WhiteField "
+                },
+                {
+                    "patientName": "Anila",
+                    "patientLocation": "WhiteField "
+                }
+            ]
+        },
+        {
+            "driverName": "Tejas S",
+            "drivingLicense": true,
+            "id": 4002,
+            "ambulanceNumber": 202,
+            "patientDetails": [
+                {
+                    "patientName": "Poornima",
+                    "patientLocation": "Jayanagar"
+                },
+                {
+                    "patientName": "Bhawani",
+                    "patientLocation": "Jayanagar"
+                }
+            ]
+        },
+        {
+            "driverName": "Nikhil",
+            "drivingLicense": true,
+            "id": 4003,
+            "ambulanceNumber": 203,
+            "patientDetails": [
+                {
+                    "patientName": "Kunal",
+                    "patientLocation": "Malleshwaram"
+                },
+                {
+                    "patientName": "Sushant",
+                    "patientLocation": "Malleshwaram"
+                }
+            ]
+        }
+    ],
+    "parking": {
+        "cars": [
+            {
+                "owner": "Gaurav",
+                "numberPlate": "KA 01 AB 1234",
+                "model": "Lamborghini"
+            },
+            {
+                "owner": "Pani",
+                "numberPlate": "KA 01 AB 1235",
+                "model": "Toyota"
+            }
+        ],
+        "bikes": [
+            {
+                "owner": "Priyanshu",
+                "numberPlate": "KA 01 AB 1236",
+                "model": "Hero"
+            },
+            {
+                "owner": "Tejas",
+                "numberPlate": "KA 01 AB 1237",
+                "model": "TVS"
+            }
+        ],
+        "scooters": [
+            {
+                "owner": "Nikhil",
+                "numberPlate": "KA 01 AB 1238",
+                "model": "Activa"
+            },
+            {
+                "owner": "Sangam",
+                "numberPlate": "KA 01 AB 1239",
+                "model": "Ola"
+            }
+        ]
+    },
+    "rooms": [
+        {
+            "roomNumber": 301,
+            "type": "ICU",
+            "department": "Cardiology",
+            "availability": "Occupied",
+            "patientsId": [
+                2001
+            ]
+        },
+        {
+            "roomNumber": 302,
+            "type": "General Ward",
+            "department": "Dermatology",
+            "availability": "Available",
+            "patientsId": [
+                2002,
+                2003
+            ]
+        }
+    ]
+}

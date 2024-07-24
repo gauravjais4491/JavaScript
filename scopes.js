@@ -8,4 +8,3 @@ function scopeTest(){
 scopeTest();
 console.log(localVal);
 console.log("Hello")
-

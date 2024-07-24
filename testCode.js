@@ -20,8 +20,7 @@ const count_occur = async (str) => {
         }
     }
 }
-// count_occur(str)
-
+// count_occur(str)        
 
 const arrayMethodsPractice = () => {
     let fruits = ['Banana', 'Orange', 'Apple', 'Lichi']

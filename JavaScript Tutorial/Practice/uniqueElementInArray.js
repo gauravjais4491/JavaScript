@@ -13,8 +13,8 @@ const filterUniqueElementInArray = (arr1, arr2) => {
     return result
 }
 
-const arr1 = [1, 2, 3, 5, 6, 7, 4, 10, 12, 14, 16, 18, 19, 20, 2]
-const arr2 = [4, 9, 5, 20, 3, 7, 6, 90, 43]
+// const arr1 = [1, 2, 3, 5, 6, 7, 4, 10, 12, 14, 16, 18, 19, 20, 2]
+// const arr2 = [4, 9, 5, 20, 3, 7, 6, 90, 43]
 // console.log(filterUniqueElementInArray(arr1, arr2));
 
 
@@ -50,4 +50,69 @@ const maxDifference = (arr) => {
     console.log(max);
 }
 
-maxDifference([1, 2, 14, 4, 5,10])
+// maxDifference([1, 2, 14, 4, 5, 10])
+
+
+
+const findUniqueElements = (arr1, arr2) => {
+
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                arr1.splice(i, 1)
+                arr2.splice(j, 1)
+                break
+            }
+        }
+    }
+    return [...arr1, ...arr2]
+}
+const arr1 = [54, 71, 50, 95, 20]
+const arr2 = [71, 51, 54, 3, 80]
+
+
+// console.log(findUniqueElements(arr1, arr2));
+
+
+const filterUniqueElements1 = (arr1, arr2) => {
+
+    let countMap = {};
+    let result = [];
+    [...arr1, ...arr2].forEach(element => {
+        if (countMap[element] === undefined) {
+            countMap[element] = 1;
+        } else {
+            countMap[element]++;
+        }
+    });
+    for (let key in countMap) {
+        if (countMap[key] === 1) {
+            result.push(key);
+        }
+
+    }
+    return result;
+}
+
+const arr3 = [1, 2, 3, 5, 6, 7, 4, 10, 12, 14, 16, 18, 19, 20, 2]
+const arr4 = [4, 9, 5, 20, 3, 7, 6, 90, 43]
+
+// console.log(findUniqueElements(arr3, arr4));
+// console.log(filterUniqueElements1(arr3, arr4))
+
+
+const findVowel = (str) => {
+    let i = 0
+    let count = 0;
+    ['a','e','i','o','u'].forEach(vowel => {
+        if(i===str.length) return
+        console.log(vowel);
+        if (str[i].includes(vowel)) {
+            console.log('true');
+            count++
+        }
+    })
+    return count
+}
+
+console.log('No. of vowel is: '+findVowel('sbjNanansjd'));
