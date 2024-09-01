@@ -32,7 +32,7 @@ let twoSum = function (nums, target) {
             return [left, right];
         } else if (right === nums.length - 1) {
             left++;
-            right = left + 1;xxxxxcc
+            right = left + 1;
         } else {
             right++;
         }
