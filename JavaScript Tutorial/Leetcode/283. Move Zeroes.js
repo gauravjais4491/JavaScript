@@ -59,10 +59,10 @@ console.time("moveZeroes2");
 console.log(moveZeroes2([0, 0, 0, 3, 13]));
 console.timeEnd("moveZeroes2");
 
-console.time("moveZeroes");
-console.log(moveZeroes([0, 0, 0, 3, 12]));
-console.timeEnd("moveZeroes");
+// console.time("moveZeroes");
+// console.log(moveZeroes([0, 0, 0, 3, 12]));
+// console.timeEnd("moveZeroes");
 
-console.time("moveZeroes1");
-console.log(moveZeroes1([0, 0, 0, 3, 12]));
-console.timeEnd("moveZeroes1");
+// console.time("moveZeroes1");
+// console.log(moveZeroes1([0, 0, 0, 3, 12]));
+// console.timeEnd("moveZeroes1");

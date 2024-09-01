@@ -1,9 +1,9 @@
 const binarySearch = (arr, target) => {
     let start = 0
-    let end = arr1.length - 1
+    let end = arr.length - 1
     while (start < end) {
         let mid = Math.floor((start + end) / 2)
-        if (arr1[mid] == target) {
+        if (arr[mid] == target) {
             return mid
         }
         else if (arr1[mid] > target) {
@@ -15,4 +15,4 @@ const binarySearch = (arr, target) => {
     }
 }
 const arr1 = [5, 4, 1, 2, 3]
-console.log(binarySearch(arr1, 2));
+console.log("The element is at index "+binarySearch(arr1, 2));

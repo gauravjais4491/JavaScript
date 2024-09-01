@@ -25,6 +25,12 @@ function updateWallet(callback) {
     }, 9500)
 
 }
+
+const updateWallet = () => {
+    createOrder()
+    procedToPayment()
+}
+updateWallet
 updateWallet(
     function () {
         console.log("Updating Wallet Please wait....");
