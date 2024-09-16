@@ -1,4 +1,4 @@
-let str = 'GeeksforGeeks kjk kjk Gaurav 211 1 2 312331'
+let str = 'GeeksForGeeks kjk kjk Gaurav 211 1 2 312331'
 
 let result = {}
 for (let i = 0; i < str.length; i++) {

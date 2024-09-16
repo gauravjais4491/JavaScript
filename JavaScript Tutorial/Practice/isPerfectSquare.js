@@ -1,4 +1,4 @@
-const isPerfectSqure = (num) => {
+const isPerfectSquare = (num) => {
     if (num < 0) {
         return false
     }
@@ -19,7 +19,7 @@ const isPerfectSqure = (num) => {
     return false
 }
 let num = 36
-if (isPerfectSqure(num)) {
+if (isPerfectSquare(num)) {
     console.log(`${num} is a perfect square`);
 }
 else {

@@ -25,7 +25,7 @@ let Start = (Number_To_Guess, Number_Of_Guess) => {
 const Guess_The_Number_Function = (Guess_The_Number, Number_To_Guess, Number_Of_Guess) => {
     do {
         if (Guess_The_Number > Number_To_Guess) {
-            console.log(`${Guess_The_Number} is Greather than Expected Number`)
+            console.log(`${Guess_The_Number} is Greater than Expected Number`)
             Number_Of_Guess++
             try_Again(Number_To_Guess, Number_Of_Guess)
         }

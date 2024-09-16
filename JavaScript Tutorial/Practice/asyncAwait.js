@@ -5,7 +5,7 @@ async function weatherReport() {
             resolve("27 Degree")
         }, 5000)
     })
-    let bangloreWeather = new Promise((resolve, reject) => {
+    let bangaloreWeather = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("21 Degree")
         }, 15000)
@@ -24,19 +24,19 @@ async function weatherReport() {
     underline()
     console.log(`Delhi Weather Report: ${delhiW}`)
     underline()
-    console.log("Fetching Banglore Weather Please wait .....")
-    let bangloreW = await bangloreWeather
+    console.log("Fetching Bangalore Weather Please wait .....")
+    let bangaloreW = await bangaloreWeather
     underline()
-    console.log("Fetched Banglore Weather")
+    console.log("Fetched Bangalore Weather")
     underline()
-    console.log(`Banglore Weather Report: ${bangloreW}`)
+    console.log(`Bangalore Weather Report: ${bangaloreW}`)
 }
 const underline = () => {
     console.log("--------------------------------------------")
 }
 const cherry = async () => {
     underline()
-    console.log("Heyy i am cheery and i am also waiting")
+    console.log("Hey i am cheery and i am also waiting")
     underline()
 }
 const main1 = async () => {
@@ -45,7 +45,7 @@ const main1 = async () => {
 }
 const gaurav = () => {
     underline()
-    console.log("heyy i am gaurav and i am not waiting")
+    console.log("hey i am gaurav and i am not waiting")
 }
 
 const weather = async () => {

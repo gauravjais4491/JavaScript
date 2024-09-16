@@ -54,7 +54,7 @@ while (isPlay) {
         else {
             console.clear();
             underline()
-            console.log("Login Sucessfully!")
+            console.log("Login Successfully!")
             get_random(details)
         }
     };

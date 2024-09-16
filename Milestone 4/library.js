@@ -1,5 +1,5 @@
-// This is the main file for the Li(brary Management System
-const readline = require("readline-sync")
+// This is the main file for the Library Management System
+import readline from "readline-sync";
 class Library {
     constructor() {
         this.books = [];
@@ -81,7 +81,7 @@ class Library {
         let userInput = ""
         while (userInput !== "quit") {
             try {
-                userInput = readline.question('Enter your command (add, remove, lend, return,CheckAvailablity, quit): ');
+                userInput = readline.question('Enter your command (add, remove, lend, return,CheckAvailability, quit): ');
                 switch (userInput) {
                     case "add": {
                         handleCommandAdd();
@@ -105,14 +105,14 @@ class Library {
                         this.returnBook(title, user);
                         break;
                     }
-                    case "CheckAvailablity":{
+                    case "CheckAvailability": {
                         console.log(this.getAllBooks())
                     }
                     default:
                         break;
                 }
             } catch (error) {
-                console.log(`An error occured: ${error.message}`)
+                console.log(`An error occurred: ${error.message}`)
             }
         }
     }
@@ -127,49 +127,39 @@ class Book {
         this.numberOfCopies = numberOfCopies;
         this.isBorrowed = false;
     }
-    getAvailablity = () => {
-        // if (this.numberOfCopies >= 10) {
-        //     console.log(`${this.title}: The book has more than enough copies available`)
-        // }
-        // else if (this.numberOfCopies > 0 || this.numberOfCopies < 10) {
-        //     console.log(`Currently there are only ${this.numberOfCopies}`)
-        // }
-        // else {
-        //     console.log('Out Of Stock')
-        // }
+    getAvailability = () => {
         return this.numberOfCopies === 0 ? "Out of stock" : this.numberOfCopies < 10 ? "Low stock" : "In stock";
     }
-}
-sell = (number) => {
-    if (number == null) {
-        number = 1;
+    sell = (number) => {
+        if (number == null) {
+            number = 1;
+        }
+        this.numberOfCopies -= number
     }
-    this.numberOfCopies -= number
-}
-restock = (number) => {
-    if (number === null) {
-        number = 5;
+    restock = (number) => {
+        if (number === null) {
+            number = 5;
+        }
+        this.numberOfCopies += number
     }
-    this.numberOfCopies += number
-}
-borrowBook = () => {
-    if (this.numberOfCopies > 0) {
-        this.isBorrowed = true
-        this.numberOfCopies--
+    borrowBook = () => {
+        if (this.numberOfCopies > 0) {
+            this.isBorrowed = true
+            this.numberOfCopies--
+        }
+    }
+    returnBook = () => {
+        this.isBorrowed = false;
+        this.numberOfCopies++
     }
 }
-returnBook = () => {
-    this.isBorrowed = false;
-    this.numberOfCopies++
-}
-
 // const myBook = new Book()
 const myLibrary = new Library()
 
 let book1 = new Book("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 10, 5);
 let book2 = new Book("The Hobbit", "J.R.R. Tolkien", 5, 5);
 let book3 = new Book("1984", "George Orwell", 8, 5);
-let book4 = new Book("The Hobbit 2", "J.R.R. Tolkien", 6,5);
+let book4 = new Book("The Hobbit 2", "J.R.R. Tolkien", 6, 5);
 
 myLibrary.addBook(book1)
 myLibrary.addBook(book2)

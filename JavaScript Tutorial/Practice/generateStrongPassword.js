@@ -35,7 +35,7 @@ function generatePassword() {
         password += getRandomCharacter(specialChars);
         password += getRandomCharacter(specialChars);
 
-        // Add additional charactexrs to meet minimum length requirement
+        // Add additional characters to meet minimum length requirement
         const additionalChars = 20 - password.length;
         for (let i = 0; i < additionalChars; i++) {
             const charSet = lowercaseLetters + uppercaseLetters + digits + specialChars;

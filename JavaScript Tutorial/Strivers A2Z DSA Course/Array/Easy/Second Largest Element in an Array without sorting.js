@@ -1,6 +1,6 @@
 const secondLargestElementInAnArrayWithoutSorting = (arr) => {
   if (arr.length < 2) return null;
-  let largest = -Infinity, secondLargest = -Infinity;
+  let largest = Number.MIN_SAFE_INTEGER, secondLargest = Number.MIN_SAFE_INTEGER;
   let i = 0;
   while (i < arr.length) {
     if (largest < arr[i]) {
