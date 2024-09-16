@@ -25,7 +25,7 @@ const p2 = new Promise((resolve, reject) => {
     }, 5000)
 })
 
-async function handlePromose() {
+async function handlePromise() {
     console.log(ad);
     console.log("Hello World!!");
     const val1 = await p1;
@@ -35,7 +35,7 @@ async function handlePromose() {
     console.log("Namaste Javascript");
     console.log(val2);
 }
-// handlePromose()
+// handlePromise()
 
 function stringToInt(str) {
     let result = 0

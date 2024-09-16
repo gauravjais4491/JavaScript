@@ -1,4 +1,4 @@
-class Shooping_Cart {
+class Shopping_Cart {
     constructor() {
         this.products = [
             {
@@ -9,7 +9,7 @@ class Shooping_Cart {
 
             },
             {
-                "name": "Unbrella",
+                "name": "Umbrella",
                 "unitPriceInRupees": 900,
                 "GSTInPercent": 12,
                 "quantity": 2
@@ -30,7 +30,7 @@ class Shooping_Cart {
                 "name": "Pen",
                 "unitPriceInRupees": 1200,
                 "GSTInPercent": 28,
-                "quanity": 10
+                "quantity": 10
             }
         ]
         this.maxGst = 0;
@@ -68,6 +68,6 @@ class Shooping_Cart {
         console.log(`The Price for ${product.Name} is ${TotalAmountToBePaidToTheShopKeeper}`)
     }
 }
-const shoppingCart = new Shooping_Cart();
+const shoppingCart = new Shopping_Cart();
 shoppingCart.isEligibleForDiscount();
 

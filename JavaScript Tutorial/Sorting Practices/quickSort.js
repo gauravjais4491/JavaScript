@@ -1,8 +1,8 @@
 const quickSort = (arr, low, high) => {
     if (high >= low) {
-        let pivotindex = partition(arr, low, high)
-        quickSort(arr, low, pivotindex - 1)
-        quickSort(arr, pivotindex + 1, high)
+        let pivotIndex = partition(arr, low, high)
+        quickSort(arr, low, pivotIndex - 1)
+        quickSort(arr, pivotIndex + 1, high)
     }
     return arr
 }

@@ -2,16 +2,16 @@ function createOrder(callback) {
     callback()
 
     setTimeout(() => {
-        console.log("Order Sucessfully Created!\n");
+        console.log("Order Successfully Created!\n");
     }, 2000)
 }
-function procedToPayment(callback) {
+function proceedToPayment(callback) {
     setTimeout(() => {
         callback()
     }, 3000)
 
     setTimeout(() => {
-        console.log("Payment Sucessfully Done!\n");
+        console.log("Payment Successfully Done!\n");
     }, 6000)
 
 }
@@ -21,20 +21,20 @@ function updateWallet(callback) {
     }, 6500)
 
     setTimeout(() => {
-        console.log("Wallet Sucessfully Updated!\n");
+        console.log("Wallet Successfully Updated!\n");
     }, 9500)
 
 }
 
 const updateWallet = () => {
     createOrder()
-    procedToPayment()
+    proceedToPayment()
 }
 updateWallet
 updateWallet(
     function () {
         console.log("Updating Wallet Please wait....");
-    }, procedToPayment(
+    }, proceedToPayment(
         function () {
             console.log("Processing Payment Please wait....");
         }, createOrder(
